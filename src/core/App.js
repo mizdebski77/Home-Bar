@@ -1,7 +1,12 @@
+import { BrowserRouter, Routes } from "react-router-dom";
 
 function App() {
   return (
-    null
+    <BrowserRouter>
+      <Routes>
+      
+      </Routes>
+    </BrowserRouter>
   );
 }
 
