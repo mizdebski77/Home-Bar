@@ -168,7 +168,7 @@ export const vodka = [
 ];
 
 
-export const whiskey = [
+export const whisky = [
     {
         id: 28,
         name: 'Whisky Sour',

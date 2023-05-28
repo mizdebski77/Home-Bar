@@ -6,7 +6,7 @@ export const Home = () => {
     const links = [
         { name: 'Vodka' },
         { name: 'Tequila' },
-        { name: 'Whiskey' },
+        { name: 'Whisky' },
         { name: 'Rum' },
         { name: 'Gin' },
         { name: 'Shots' },
