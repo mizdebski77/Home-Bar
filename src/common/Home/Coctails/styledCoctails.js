@@ -19,7 +19,7 @@ export const CustomSlider = styled(Slider)`
 `;
 
 export const CoctailTile = styled.div`
-    max-width: 1000px;
+    max-width: 440px;
     padding: 20px;
     margin: 0 auto;
     gap: 28px;
@@ -30,7 +30,6 @@ export const CoctailTile = styled.div`
 
 export const TileWrapper = styled.div`
     display: grid;
-    grid-template-columns: auto 1fr;
     gap: 40px;
 `;
 
@@ -53,7 +52,7 @@ export const CoctailName = styled.h2`
 `;
 
 export const CoctailImage = styled.img`
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
 `;
 
@@ -64,9 +63,9 @@ export const Ingredients = styled.li`
 
 export const FavButton = styled(SVG)`
     width: 24px;
-    margin: 0 0 0 90%;
+    margin: 0 0 0 95%;
     cursor: pointer;
-    fill: white;
+    fill: ${({theme}) => theme.color.fontColor};
 
     ${({fav}) => fav && css`
         fill: ${({theme}) => theme.color.favorite};

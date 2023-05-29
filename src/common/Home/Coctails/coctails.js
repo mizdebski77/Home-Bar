@@ -7,15 +7,19 @@ import "slick-carousel/slick/slick-theme.css";
 import favButton from '../../images/favorite.svg';
 
 export const Coctails = () => {
-
     const location = useLocation();
-    const [favorite, setFavorite] = useState(false);
+    const [favorites, setFavorites] = useState(JSON.parse(localStorage.getItem('favorites')) || []);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
 
-    const addCoctailToFavorite = () => {
-        setFavorite(!favorite);
-    }
+    const toggleFavorite = (id) => {
+        const isFavorite = favorites.includes(id);
+        if (isFavorite) {
+            setFavorites(favorites.filter((favId) => favId !== id));
+        } else {
+            setFavorites([...favorites, id]);
+        }
+    };
 
-    
 
     const coctails =
         location.pathname.includes('Vodka')
@@ -34,11 +38,7 @@ export const Coctails = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-
     };
-
-    console.log(favorite);
-
 
     return (
         <Wrapper>
@@ -61,19 +61,21 @@ export const Coctails = () => {
                             <TextArea>
                                 <CoctailName> {coctail.name}</CoctailName>
                                 <IngredientsTitle>Składniki:</IngredientsTitle>
-                                {coctail.ingredients.map((ingridient, id) => (
+                                {coctail.ingredients.map((ingredient, id) => (
                                     <Ingredients key={id}>
-                                        {ingridient}
+                                        {ingredient}
                                     </Ingredients>
                                 ))}
                             </TextArea>
                         </TileWrapper>
-                        <FavButton fav ={favorite} onClick={addCoctailToFavorite} src={favButton} />
-
+                        <FavButton
+                            fav={favorites.includes(coctail.id)}
+                            onClick={() => toggleFavorite(coctail.id)}
+                            src={favButton}
+                        />
                     </CoctailTile>
                 ))}
             </CustomSlider>
         </Wrapper>
     );
 };
-
