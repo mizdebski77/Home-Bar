@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { vodka, gin, rum, whisky, tequila, shots } from '../../../core/coctails';
-import { CoctailImage, CoctailName, CoctailTile, CustomSlider, FavButton, Ingredients, IngredientsTitle, TextArea, TileWrapper, Title, Wrapper } from './styledCoctails';
+import { CoctailImage, CoctailName, CoctailTile, CustomSlider, FavButton, Ingredients, IngredientsTitle, TextArea, Title, Wrapper } from './styledCoctails';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import favButton from '../../images/favorite.svg';
@@ -36,8 +36,18 @@ export const Coctails = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 1,
+        speed: 1000,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+
+        responsive: [
+            {
+                breakPoint: 1500,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
     };
 
     return (
@@ -56,18 +66,16 @@ export const Coctails = () => {
             <CustomSlider {...settings}>
                 {coctails.map((coctail, id) => (
                     <CoctailTile key={id}>
-                        <TileWrapper>
-                            <CoctailImage src={coctail.image} />
-                            <TextArea>
-                                <CoctailName> {coctail.name}</CoctailName>
-                                <IngredientsTitle>Składniki:</IngredientsTitle>
-                                {coctail.ingredients.map((ingredient, id) => (
-                                    <Ingredients key={id}>
-                                        {ingredient}
-                                    </Ingredients>
-                                ))}
-                            </TextArea>
-                        </TileWrapper>
+                        <CoctailImage src={coctail.image} />
+                        <TextArea>
+                            <CoctailName> {coctail.name}</CoctailName>
+                            <IngredientsTitle>Składniki:</IngredientsTitle>
+                            {coctail.ingredients.map((ingredient, id) => (
+                                <Ingredients key={id}>
+                                    {ingredient}
+                                </Ingredients>
+                            ))}
+                        </TextArea>
                         <FavButton
                             fav={favorites.includes(coctail.id)}
                             onClick={() => toggleFavorite(coctail.id)}

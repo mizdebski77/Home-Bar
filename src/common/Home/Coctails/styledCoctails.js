@@ -11,30 +11,43 @@ export const Title = styled.h1`
     text-align: center;
     font-weight: normal;
     font-size: 48px;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid ${({theme}) => theme.color.thirdColor};
 `;
 
 export const CustomSlider = styled(Slider)`
-    max-width: 960px;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 20px;
+
+    .slick-dots {
+        li {
+            button:before {
+                color: ${({theme}) => theme.color.fontColor};
+                font-size: 16px;
+            }
+        }
+    };
+
+    .slick-prev::before,
+    .slick-next:before {
+        color: ${({theme}) => theme.color.fontColor};
+    }
 `;
 
 export const CoctailTile = styled.div`
     max-width: 440px;
     padding: 20px;
     margin: 0 auto;
-    gap: 28px;
+    border-radius: 10px;
     background: ${({ theme }) => theme.color.secondColor};
     border: 1px solid ${({ theme }) => theme.color.fontColor};
-    box-shadow: ${({ theme }) => theme.color.thirdColor} 0 10px 10px;
-`;
-
-export const TileWrapper = styled.div`
-    display: grid;
-    gap: 40px;
+    box-shadow: ${({ theme }) => theme.color.thirdColor} 4px 4px 4px;
 `;
 
 export const TextArea = styled.div`
-
+    min-height: 310px;
 `;  
 
 export const IngredientsTitle = styled.h3`
@@ -53,7 +66,14 @@ export const CoctailName = styled.h2`
 
 export const CoctailImage = styled.img`
     width: 400px;
+    height: 265px;
     margin: 0 auto;
+    box-shadow: ${({ theme }) => theme.color.fontColor} 0 0 10px;
+
+    /* @media (max-width: ${({theme}) => theme.breakPoint.firstBreakPoint}px){
+        width: 300px;
+        height: 200px;
+    } */
 `;
 
 export const Ingredients = styled.li`

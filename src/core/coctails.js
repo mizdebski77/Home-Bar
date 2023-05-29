@@ -79,7 +79,7 @@ export const vodka = [
         id: 13,
         name: 'Long Island Iced Tea',
         image: 'https://mojbar.pl/wp-content/uploads/2017/04/long-island-iced-tea.jpg',
-        ingredients: ['wódka', 'rum', 'tequila', 'gin', 'triple sec', 'sok z cytryny', 'coca-cola']
+        ingredients: ['wódka', 'rum', 'tequila', 'gin', 'sok z cytryny', 'coca-cola']
     },
     {
         id: 14,
