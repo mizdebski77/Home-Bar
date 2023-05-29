@@ -3,4 +3,5 @@ import styled from "styled-components";
 
 export const TitleLink = styled(Link)`
     padding: 20px;
+    font-size: 32px;
 `;
