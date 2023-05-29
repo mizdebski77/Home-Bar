@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/D-M-Atelier/static/css/main.e7cdd750.css",
-    "main.js": "/D-M-Atelier/static/js/main.10d5cc43.js",
+    "main.js": "/D-M-Atelier/static/js/main.41b4310c.js",
     "static/media/slick.svg": "/D-M-Atelier/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/D-M-Atelier/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/D-M-Atelier/static/media/slick.c94f7671dcc99dce43e2.ttf",
@@ -9,10 +9,10 @@
     "static/media/slick.woff": "/D-M-Atelier/static/media/slick.295183786cd8a1389865.woff",
     "static/media/favorite.svg": "/D-M-Atelier/static/media/favorite.40ebc38937cc784ebcd52d6526a5a79c.svg",
     "main.e7cdd750.css.map": "/D-M-Atelier/static/css/main.e7cdd750.css.map",
-    "main.10d5cc43.js.map": "/D-M-Atelier/static/js/main.10d5cc43.js.map"
+    "main.41b4310c.js.map": "/D-M-Atelier/static/js/main.41b4310c.js.map"
   },
   "entrypoints": [
     "static/css/main.e7cdd750.css",
-    "static/js/main.10d5cc43.js"
+    "static/js/main.41b4310c.js"
   ]
 }
