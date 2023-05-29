@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { vodka, gin, rum, whisky, tequila, shots } from '../../../core/coctails';
 import { CoctailImage, CoctailName, CoctailTile, CustomSlider, FavButton, Ingredients, IngredientsTitle, TextArea, TileWrapper, Title, Wrapper } from './styledCoctails';
@@ -9,6 +9,13 @@ import favButton from '../../images/favorite.svg';
 export const Coctails = () => {
 
     const location = useLocation();
+    const [favorite, setFavorite] = useState(false);
+
+    const addCoctailToFavorite = () => {
+        setFavorite(!favorite);
+    }
+
+    
 
     const coctails =
         location.pathname.includes('Vodka')
@@ -30,7 +37,7 @@ export const Coctails = () => {
 
     };
 
-    console.log(coctails);
+    console.log(favorite);
 
 
     return (
@@ -53,7 +60,7 @@ export const Coctails = () => {
                             <CoctailImage src={coctail.image} />
                             <TextArea>
                                 <CoctailName> {coctail.name}</CoctailName>
-                                <IngredientsTitle>Składniki</IngredientsTitle>
+                                <IngredientsTitle>Składniki:</IngredientsTitle>
                                 {coctail.ingredients.map((ingridient, id) => (
                                     <Ingredients key={id}>
                                         {ingridient}
@@ -61,7 +68,7 @@ export const Coctails = () => {
                                 ))}
                             </TextArea>
                         </TileWrapper>
-                        <FavButton src={favButton} />
+                        <FavButton fav ={favorite} onClick={addCoctailToFavorite} src={favButton} />
 
                     </CoctailTile>
                 ))}

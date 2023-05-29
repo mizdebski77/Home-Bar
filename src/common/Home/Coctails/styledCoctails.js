@@ -1,5 +1,6 @@
 import Slider from "react-slick";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import SVG from "react-inlinesvg";
 
 export const Wrapper = styled.section`
     border: 2px solid ${({ theme }) => theme.color.thirdColor};
@@ -61,7 +62,13 @@ export const Ingredients = styled.li`
     font-size: 20px;
 `;
 
-export const FavButton = styled.img`
+export const FavButton = styled(SVG)`
     width: 24px;
     margin: 0 0 0 90%;
+    cursor: pointer;
+    fill: white;
+
+    ${({fav}) => fav && css`
+        fill: ${({theme}) => theme.color.favorite};
+    `};
 `;
