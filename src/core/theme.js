@@ -9,6 +9,6 @@ export const theme = {
 
     breakPoint: {
         firstBreakPoint: 1500,
-        mobileMax: 900,
+        mobileMax: 1000,
     }
 }

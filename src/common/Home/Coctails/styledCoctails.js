@@ -20,6 +20,16 @@ export const CustomSlider = styled(Slider)`
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: ${({theme}) => theme.breakPoint.firstBreakPoint}px){
+        width: 940px;
+    }
+
+    @media (max-width: ${({theme}) => theme.breakPoint.mobileMax}px){
+        width: 100%
+    }
 
     .slick-dots {
         li {
@@ -69,11 +79,6 @@ export const CoctailImage = styled.img`
     height: 265px;
     margin: 0 auto;
     box-shadow: ${({ theme }) => theme.color.fontColor} 0 0 10px;
-
-    /* @media (max-width: ${({theme}) => theme.breakPoint.firstBreakPoint}px){
-        width: 300px;
-        height: 200px;
-    } */
 `;
 
 export const Ingredients = styled.li`

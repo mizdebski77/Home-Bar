@@ -39,16 +39,26 @@ export const Coctails = () => {
         speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 3,
-
         responsive: [
             {
-                breakPoint: 1500,
+                breakpoint: 1500,
                 settings: {
                     slidesToShow: 2,
-                }
-            }
-        ]
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                },
+            },
+        ],
     };
+
+
 
     return (
         <Wrapper>
