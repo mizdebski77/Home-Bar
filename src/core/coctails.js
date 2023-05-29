@@ -2,31 +2,31 @@ export const gin = [
     {
         id: 1,
         name: 'Gimlet',
-        image: 'https://www.simplyrecipes.com/thmb/d6a-ci1K1GNTKZ51sR3x5eY-u4c=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2020__08__Gimlet-Cocktail-LEAD-1-c265ed3ce162459ea04b3e795ace26d8.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2017/04/gimlet.jpg',
         ingredients: ['gin', 'sok z limonki', 'syrop cukrowy']
     },
     {
         id: 2,
         name: 'Rickey',
-        image: 'https://www.acouplecooks.com/wp-content/uploads/2021/03/Lime-Rickey-003.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2019/01/RICKEY.jpg',
         ingredients: ['gin', 'sok z limonki', 'woda sodowa']
     },
     {
         id: 3,
         name: 'Basil Smash',
-        image: 'https://www.acouplecooks.com/wp-content/uploads/2021/05/Gin-Basil-Smash-001.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2020/05/8v2.jpg',
         ingredients: ['gin', 'sok z cytryny', 'syrop cukrowy', 'liście bazylii']
     },
     {
         id: 4,
         name: 'Orange Blossom',
-        image: 'https://www.liquor.com/thmb/tjao4u4XmY9gDDNpLF7zP1ECsSY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/orange-blossom-720x720-recipe-70b85d05c34a4bc381e359cf693c2f79.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2018/12/ORANGE-BLOSSOM.jpg',
         ingredients: ['wódka', 'likier pomarańczowy', 'sok z pomarańczy']
     },
     {
         id: 5,
         name: 'Baby Blue Martini',
-        image: 'https://kulinarneprzeboje.pl/wp-content/uploads/2020/01/drink-baby-blue-martini-768x1155.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2019/10/BABY-BLUE-MARTINI.jpg',
         ingredients: ['wódka', 'curacao blue', 'sok z ananasa']
     },
     {
@@ -38,31 +38,31 @@ export const gin = [
     {
         id: 7,
         name: 'Bikini Martini',
-        image: 'https://kokteli.hr/wp-content/uploads/2021/05/Bikini-Martini.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2020/08/Bikini-Martini-.jpg',
         ingredients: ['wódka', 'malibu', 'sok ananasowy', 'sok żurawinowy']
     },
     {
         id: 8,
         name: 'Southside Rickey',
-        image: 'https://www.tasteofhome.com/wp-content/uploads/2019/11/mojito-southside-shutterstock_1412357489.jpg?resize=768,576',
+        image: 'https://mojbar.pl/wp-content/uploads/2020/07/Southside-Rickey.jpg',
         ingredients: ['rum', 'sok z limonki', 'mięta', 'woda sodowa']
     },
     {
         id: 9,
         name: 'Ink Martini',
-        image: 'https://cocktailsandbars.com/wp-content/uploads/2016/10/blacktopus-martini-cocktailsandbars-IMG_094689-1.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2018/12/INK-MARTINI.jpg',
         ingredients: ['wódka', 'sok z cytryny', 'syrop cukrowy', 'blued curacao']
     },
     {
         id: 10,
         name: 'Southside',
-        image: 'https://www.acouplecooks.com/wp-content/uploads/2020/03/Southside-Cocktail-001.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2020/07/southside.jpg',
         ingredients: ['gin', 'sok z limonki', 'syrop cukrowy', 'mięta']
     },
     {
         id: 11,
         name: 'Gin & Tonic',
-        image: 'https://www.thespruceeats.com/thmb/r7Zjvziw0mGDawZw1ZMGAA79gEU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gin-and-tonic-recipe-759300-hero-01-aa12e6504f944c54b8b9c589cc1d0ac6.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2017/04/gin-tonic.jpg',
         ingredients: ['gin', 'tonic']
     },
     {
@@ -382,7 +382,7 @@ export const shots = [
     {
         id: 62,
         name: 'Kamikaze Shot',
-        image: 'https://koktajl.tv/file/Kamikaze-shoty_9cdbc9a52652b5fb1ab979c424693848ceefede2.jpg',
+        image: 'https://mojbar.pl/wp-content/uploads/2017/11/dsc6342-kopia.jpg',
         ingredients: ['wódka', 'likier blue curaçao', 'sok z cytryny']
     },
     {

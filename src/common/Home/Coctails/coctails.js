@@ -1,7 +1,10 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { vodka, gin, rum, whisky, tequila, shots } from '../../../core/coctails';
-import { Title, Wrapper } from './styledCoctails';
+import { CoctailImage, CoctailName, CoctailTile, CustomSlider, FavButton, Ingredients, IngredientsTitle, TextArea, TileWrapper, Title, Wrapper } from './styledCoctails';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import favButton from '../../images/favorite.svg';
 
 export const Coctails = () => {
 
@@ -19,7 +22,17 @@ export const Coctails = () => {
                         location.pathname.includes('Tequila')
                             ? tequila : shots;
 
-console.log(location.pathname);
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+
+    };
+
+    console.log(coctails);
+
+
     return (
         <Wrapper>
             <Title>
@@ -32,6 +45,27 @@ console.log(location.pathname);
                                         : " Tequilą"))
                 }
             </Title>
+
+            <CustomSlider {...settings}>
+                {coctails.map((coctail, id) => (
+                    <CoctailTile key={id}>
+                        <TileWrapper>
+                            <CoctailImage src={coctail.image} />
+                            <TextArea>
+                                <CoctailName> {coctail.name}</CoctailName>
+                                <IngredientsTitle>Składniki</IngredientsTitle>
+                                {coctail.ingredients.map((ingridient, id) => (
+                                    <Ingredients key={id}>
+                                        {ingridient}
+                                    </Ingredients>
+                                ))}
+                            </TextArea>
+                        </TileWrapper>
+                        <FavButton src={favButton} />
+
+                    </CoctailTile>
+                ))}
+            </CustomSlider>
         </Wrapper>
     );
 };
