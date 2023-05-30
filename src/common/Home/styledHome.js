@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-
+    border: 1px solid ${({theme}) => theme.color.thirdColor};
+    min-height: 95vh;
 `;
 
 export const Container = styled.div`
@@ -13,6 +14,10 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     font-size: 48px;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid ${({theme})=> theme.color.thirdColor};
 `;
 
 export const PhotoLink = styled(Link)`
@@ -24,8 +29,8 @@ export const PhotoLink = styled(Link)`
 `;
 
 export const TitleLink = styled.h1`
-    padding: 20px;
     font-size: 32px;
+    text-align: center;
 `;
 
 export const Photo = styled.img`
