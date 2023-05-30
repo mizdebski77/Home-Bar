@@ -5,6 +5,10 @@ import SVG from "react-inlinesvg";
 export const Wrapper = styled.section`
     border: 2px solid ${({ theme }) => theme.color.thirdColor};
     min-height: 95vh;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        min-height: null;
+    }
 `;
 
 export const Title = styled.h1`
@@ -33,7 +37,7 @@ export const CustomSlider = styled(Slider)`
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         width: 100%;
-        padding: 8px;
+        padding: 0px;
     }
 
     .slick-slide {
@@ -41,6 +45,7 @@ export const CustomSlider = styled(Slider)`
     }
 
     .slick-dots {
+        margin: -16px;
         li {
             button:before {
                 color: ${({ theme }) => theme.color.fontColor};
@@ -73,7 +78,7 @@ export const TextArea = styled.div`
     min-height: 310px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        min-height: 222px;
+        min-height: 250px;
     }
 `;
 
@@ -96,6 +101,7 @@ export const CoctailName = styled.h2`
 
     
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        text-underline-offset: 4px;
         font-size: 24px;
     }
 `;
@@ -109,6 +115,7 @@ export const CoctailImage = styled.img`
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         width: 100%;
         height: 100%;
+        max-height: 170px;
     }
 `;
 

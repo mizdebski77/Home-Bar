@@ -45,15 +45,23 @@ export const Coctails = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     arrows: false,
                 },
             },
             {
-                breakpoint: 550,
+                breakpoint: 470,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: false,
+                    speed: 300,
                 },
             },
         ],
