@@ -78,7 +78,7 @@ export const CustomSlider = styled(Slider)`
 
     .slick-slide {
         padding: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .slick-dots {
@@ -115,7 +115,7 @@ export const TextArea = styled.div`
     min-height: 310px;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        min-height: 220px;
+        min-height: 250px;
     }
 `;
 

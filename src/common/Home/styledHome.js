@@ -65,6 +65,6 @@ export const Photo = styled.img`
     }
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        width: 80px;
+        width: 100px;
     }
 `;

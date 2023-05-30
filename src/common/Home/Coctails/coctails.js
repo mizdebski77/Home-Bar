@@ -107,8 +107,7 @@ export const Coctails = () => {
                         />
                     </CoctailTile>
                 ))}
-            </CustomSlider>\
-
+            </CustomSlider> 
         </Wrapper>
     );
 };
