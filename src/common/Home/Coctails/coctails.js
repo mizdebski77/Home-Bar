@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { vodka, gin, rum, whisky, tequila, shots } from '../../../core/coctails';
-import { CoctailImage, CoctailName, CoctailTile, CustomSlider, FavButton, Ingredients, IngredientsTitle, TextArea, Title, Wrapper } from './styledCoctails';
+import { BackButton, BackText, CoctailImage, CoctailName, CoctailTile, CustomSlider, FavButton, Ingredients, IngredientsTitle, TextArea, Title, TitleWrapper, Wrapper } from './styledCoctails';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import favButton from '../../images/favorite.svg';
@@ -71,16 +71,21 @@ export const Coctails = () => {
 
     return (
         <Wrapper>
-            <Title>
-                {location.pathname.includes("Shots") ? "Shoty" :
-                    ("Drinki z " +
-                        (location.pathname.includes("Vodka") ? " Wódką"
-                            : location.pathname.includes("Gin") ? " Ginem"
-                                : location.pathname.includes("Whisky") ? " Whisky"
-                                    : location.pathname.includes("Rum") ? " Rumem"
-                                        : " Tequilą"))
-                }
-            </Title>
+            <TitleWrapper>
+            <BackButton to="/home">🡸 <BackText>Back</BackText>   </BackButton>
+
+                <Title>
+                    {location.pathname.includes("Shots") ? "Shoty" :
+                        ("Drinki z " +
+                            (location.pathname.includes("Vodka") ? " Wódką"
+                                : location.pathname.includes("Gin") ? " Ginem"
+                                    : location.pathname.includes("Whisky") ? " Whisky"
+                                        : location.pathname.includes("Rum") ? " Rumem"
+                                            : " Tequilą"))
+                    }
+                </Title>
+            </TitleWrapper>
+
 
             <CustomSlider {...settings}>
                 {coctails.map((coctail, id) => (
@@ -102,7 +107,8 @@ export const Coctails = () => {
                         />
                     </CoctailTile>
                 ))}
-            </CustomSlider>
+            </CustomSlider>\
+
         </Wrapper>
     );
 };

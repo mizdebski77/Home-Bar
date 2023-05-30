@@ -1,14 +1,23 @@
 import Slider from "react-slick";
 import styled, { css } from "styled-components";
 import SVG from "react-inlinesvg";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.section`
     border: 2px solid ${({ theme }) => theme.color.thirdColor};
     min-height: 95vh;
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
-        min-height: null;
+        min-height: 100vh;
     }
+`;
+
+export const TitleWrapper = styled.div`
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-bottom: 1px solid ${({ theme }) => theme.color.second};
+    align-items: center;
+    margin: 0 20px;
 `;
 
 export const Title = styled.h1`
@@ -17,11 +26,38 @@ export const Title = styled.h1`
     font-size: 48px;
     margin: 0;
     padding: 10px;
-    border-bottom: 1px solid ${({ theme }) => theme.color.thirdColor};
 
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         font-size: 24px;
     }
+`;
+
+export const BackButton = styled(Link)`
+    text-decoration: none;
+    color: ${({ theme }) => theme.color.fontColor};
+    padding: 10px;
+    transition: 0.8s;
+    margin-left:10px;
+    border-radius: 10px;
+    position: absolute;
+
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
+        position: null;
+        margin-left:0;
+    }
+
+    :hover {
+        cursor: pointer;
+        transform:scale(1.05);
+        color: ${({ theme }) => theme.color.secondColor};
+        background: ${({ theme }) => theme.color.thirdColor};
+    }
+`;
+
+export const BackText = styled.span`
+    @media (max-width: ${({ theme }) => theme.breakPoint.firstBreakPoint}px){
+        display: none;
+    } 
 `;
 
 export const CustomSlider = styled(Slider)`
@@ -42,6 +78,7 @@ export const CustomSlider = styled(Slider)`
 
     .slick-slide {
         padding: 10px;
+        margin-bottom: 20px;
     }
 
     .slick-dots {
@@ -142,3 +179,5 @@ export const FavButton = styled(SVG)`
         fill: ${({ theme }) => theme.color.favorite};
     `};
 `;
+
+
