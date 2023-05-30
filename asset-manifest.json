@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/D-M-Atelier/static/css/main.e7cdd750.css",
-    "main.js": "/D-M-Atelier/static/js/main.2868a2ec.js",
+    "main.js": "/D-M-Atelier/static/js/main.34c3de4d.js",
     "static/media/gin.webp": "/D-M-Atelier/static/media/gin.57e4cb39d151b95416ab.webp",
     "static/media/whisky.webp": "/D-M-Atelier/static/media/whisky.2664b0c600c4287d2003.webp",
     "static/media/vodka.webp": "/D-M-Atelier/static/media/vodka.69e73c701a3ec8e579fc.webp",
@@ -15,10 +15,10 @@
     "static/media/slick.woff": "/D-M-Atelier/static/media/slick.295183786cd8a1389865.woff",
     "static/media/favorite.svg": "/D-M-Atelier/static/media/favorite.40ebc38937cc784ebcd52d6526a5a79c.svg",
     "main.e7cdd750.css.map": "/D-M-Atelier/static/css/main.e7cdd750.css.map",
-    "main.2868a2ec.js.map": "/D-M-Atelier/static/js/main.2868a2ec.js.map"
+    "main.34c3de4d.js.map": "/D-M-Atelier/static/js/main.34c3de4d.js.map"
   },
   "entrypoints": [
     "static/css/main.e7cdd750.css",
-    "static/js/main.2868a2ec.js"
+    "static/js/main.34c3de4d.js"
   ]
 }
