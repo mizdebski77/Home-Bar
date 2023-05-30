@@ -72,7 +72,7 @@ export const Coctails = () => {
     return (
         <Wrapper>
             <TitleWrapper>
-            <BackButton to="/home">🡸 <BackText>Back</BackText>   </BackButton>
+            <BackButton to="/home">🡸 <BackText>Powrót</BackText> </BackButton>
 
                 <Title>
                     {location.pathname.includes("Shots") ? "Shoty" :
