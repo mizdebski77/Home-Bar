@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { vodka, gin, rum, whisky, tequila, shots } from '../../../core/coctails';
+import {  gin, rum, whisky, tequila, shots, vodka } from '../../../core/coctails';
 import { BackButton, BackText, CoctailImage, CoctailName, CoctailTile, CustomSlider, FavButton, Ingredients, IngredientsTitle, TextArea, Title, TitleWrapper, Wrapper } from './styledCoctails';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,7 +22,7 @@ export const Coctails = () => {
 
 
     const coctails =
-        location.pathname.includes('Vodka')
+        location.pathname.includes('Wodka')
             ? vodka :
             location.pathname.includes('Gin')
                 ? gin :
@@ -67,6 +67,7 @@ export const Coctails = () => {
         ],
     };
 
+    console.log(location.pathname);
 
 
     return (
@@ -75,9 +76,9 @@ export const Coctails = () => {
             <BackButton to="/home">🡸 <BackText>Powrót</BackText> </BackButton>
 
                 <Title>
-                    {location.pathname.includes("Shots") ? "Shoty" :
+                    {location.pathname.includes("Shoty") ? "Shoty" :
                         ("Drinki z " +
-                            (location.pathname.includes("Vodka") ? " Wódką"
+                            (location.pathname.includes("Wodka") ? " Wódką"
                                 : location.pathname.includes("Gin") ? " Ginem"
                                     : location.pathname.includes("Whisky") ? " Whisky"
                                         : location.pathname.includes("Rum") ? " Rumem"

@@ -11,7 +11,7 @@ import { useTrail, animated } from 'react-spring';
 export const Home = () => {
 
     const links = [
-        { name: 'Wódka', photo: vodka },
+        { name: 'Wodka', photo: vodka },
         { name: 'Tequila', photo: tequila },
         { name: 'Whisky', photo: whisky },
         { name: 'Rum', photo: rum },
