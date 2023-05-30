@@ -1,7 +1,13 @@
 {
   "files": {
     "main.css": "/D-M-Atelier/static/css/main.e7cdd750.css",
-    "main.js": "/D-M-Atelier/static/js/main.e40eb05d.js",
+    "main.js": "/D-M-Atelier/static/js/main.e05b5a41.js",
+    "static/media/gin.webp": "/D-M-Atelier/static/media/gin.57e4cb39d151b95416ab.webp",
+    "static/media/whisky.webp": "/D-M-Atelier/static/media/whisky.2664b0c600c4287d2003.webp",
+    "static/media/vodka.webp": "/D-M-Atelier/static/media/vodka.69e73c701a3ec8e579fc.webp",
+    "static/media/tequila.webp": "/D-M-Atelier/static/media/tequila.59d10a0ac03cc831547f.webp",
+    "static/media/rum.webp": "/D-M-Atelier/static/media/rum.ca8a80333aed991ee08a.webp",
+    "static/media/shots.webp": "/D-M-Atelier/static/media/shots.70e5e34c21b1ebb5f493.webp",
     "static/media/slick.svg": "/D-M-Atelier/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/D-M-Atelier/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/D-M-Atelier/static/media/slick.c94f7671dcc99dce43e2.ttf",
@@ -9,10 +15,10 @@
     "static/media/slick.woff": "/D-M-Atelier/static/media/slick.295183786cd8a1389865.woff",
     "static/media/favorite.svg": "/D-M-Atelier/static/media/favorite.40ebc38937cc784ebcd52d6526a5a79c.svg",
     "main.e7cdd750.css.map": "/D-M-Atelier/static/css/main.e7cdd750.css.map",
-    "main.e40eb05d.js.map": "/D-M-Atelier/static/js/main.e40eb05d.js.map"
+    "main.e05b5a41.js.map": "/D-M-Atelier/static/js/main.e05b5a41.js.map"
   },
   "entrypoints": [
     "static/css/main.e7cdd750.css",
-    "static/js/main.e40eb05d.js"
+    "static/js/main.e05b5a41.js"
   ]
 }
