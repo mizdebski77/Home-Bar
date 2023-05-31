@@ -7,6 +7,7 @@ import rum from '../images/alcohol/rum.webp';
 import shots from '../images/alcohol/shots.webp';
 import tequila from '../images/alcohol/tequila.webp';
 import { useTrail, animated } from 'react-spring';
+import favorite from '../images/alcohol/alcohols.png'
 
 export const Home = () => {
 
@@ -17,6 +18,7 @@ export const Home = () => {
         { name: 'Rum', photo: rum },
         { name: 'Gin', photo: gin },
         { name: 'Shoty', photo: shots },
+        {name: "Ulubione", photo: favorite}
     ];
 
     const trail = useTrail(links.length, {

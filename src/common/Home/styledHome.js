@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import SVG from "react-inlinesvg";
 
 export const Wrapper = styled.section`
     border: 1px solid ${({ theme }) => theme.color.thirdColor};
@@ -41,7 +42,7 @@ export const Title = styled.h1`
 
 export const PhotoLink = styled(Link)`
     display: grid;
-    justify-content: center;
+    align-items: end;
     gap: 20px;
     color: white;
     text-decoration: none;
@@ -67,4 +68,9 @@ export const Photo = styled.img`
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px){
         width: 100px;
     }
+`;
+
+export const Fav = styled(SVG)`
+    fill: red;
+    width: 200px;
 `;

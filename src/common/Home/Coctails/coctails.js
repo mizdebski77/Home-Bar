@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import {  gin, rum, whisky, tequila, shots, vodka } from '../../../core/coctails';
+import { gin, rum, whisky, tequila, shots, vodka, FavDrinks } from '../../../core/coctails';
 import { BackButton, BackText, CoctailImage, CoctailName, CoctailTile, CustomSlider, FavButton, Ingredients, IngredientsTitle, TextArea, Title, TitleWrapper, Wrapper } from './styledCoctails';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,7 +31,9 @@ export const Coctails = () => {
                     location.pathname.includes('Whisky')
                         ? whisky :
                         location.pathname.includes('Tequila')
-                            ? tequila : shots;
+                            ? tequila :
+                            location.pathname.includes('Ulubione') 
+                            ? FavDrinks : shots;
 
     const settings = {
         dots: true,
@@ -67,26 +69,23 @@ export const Coctails = () => {
         ],
     };
 
-    console.log(location.pathname);
-
-
     return (
         <Wrapper>
             <TitleWrapper>
-            <BackButton to="/home">🡸 <BackText>Powrót</BackText> </BackButton>
+                <BackButton to="/home">🡸 <BackText>Powrót</BackText> </BackButton>
 
                 <Title>
                     {location.pathname.includes("Shoty") ? "Shoty" :
-                        ("Drinki z " +
-                            (location.pathname.includes("Wodka") ? " Wódką"
-                                : location.pathname.includes("Gin") ? " Ginem"
-                                    : location.pathname.includes("Whisky") ? " Whisky"
-                                        : location.pathname.includes("Rum") ? " Rumem"
-                                            : " Tequilą"))
+                        location.pathname.includes("Ulubione") ? "Ulubione Drinki" :
+                            ("Drinki z " +
+                                (location.pathname.includes("Wodka") ? " Wódką"
+                                    : location.pathname.includes("Gin") ? " Ginem"
+                                        : location.pathname.includes("Whisky") ? " Whisky"
+                                            : location.pathname.includes("Rum") ? " Rumem"
+                                                : "Tequilą"))
                     }
                 </Title>
             </TitleWrapper>
-
 
             <CustomSlider {...settings}>
                 {coctails.map((coctail, id) => (
@@ -108,7 +107,7 @@ export const Coctails = () => {
                         />
                     </CoctailTile>
                 ))}
-            </CustomSlider> 
+            </CustomSlider>
         </Wrapper>
     );
 };

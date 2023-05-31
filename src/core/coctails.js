@@ -398,3 +398,5 @@ export const shots = [
         ingredients: ['tequila', 'likier kawowy']
     }
 ];
+
+export const FavDrinks = [JSON.parse(localStorage.getItem('favorites'))]
